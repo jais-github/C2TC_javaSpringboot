@@ -6,27 +6,22 @@ import jakarta.persistence.Id;
 @Entity
 public class Student
 {
-	 private Integer id;
+	 private int id;
 	 private String name;
 	 private String college;
-	 private Integer roll;
-	 private String qualification;
+	 private long roll;
 	 private String course;
-	 private String year;
+	 private int year;
 	 private String certificate;
-	 private Integer hallticketno;
+	 private long hallticketno;
+	 private String qualification;
 	
-	
-	 
 	 public Student() {
-			super();
-			// TODO Auto-generated constructor stub
-		}
+		super();
+	}
 
-
-
-	public Student(int id, String name, String college, Integer roll, String qualification, String course, String year,
-			String certificate, Integer hallticketno) {
+	public Student(int id, String name, String college,  long roll, String qualification, String course,
+			int year,String certificate,  long hallticketno) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -38,127 +33,89 @@ public class Student
 		this.certificate = certificate;
 		this.hallticketno = hallticketno;
 	}
-
-	
-@Id
+	@Id
 	public int getId() {
 		return id;
 	}
-
-
 
 	public void setId(int id) {
 		this.id = id;
 	}
 
-
-
 	public String getName() {
 		return name;
 	}
 
-
-
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String name) 
+	{
+		this.name =name;
 	}
-
-
 
 	public String getCollege() {
 		return college;
 	}
 
-
-
 	public void setCollege(String college) {
 		this.college = college;
 	}
 
-
-
-	public int getRoll() {
+	public long getRoll() {
 		return roll;
 	}
 
-
-
-	public void setRoll(Integer roll) {
+	public void setRoll(long roll) {
 		this.roll = roll;
 	}
-
-
 
 	public String getQualification() {
 		return qualification;
 	}
 
-
-
 	public void setQualification(String qualification) {
 		this.qualification = qualification;
 	}
-
-
 
 	public String getCourse() {
 		return course;
 	}
 
-
-
 	public void setCourse(String course) {
 		this.course = course;
 	}
 
-
-
-	public String getYear() {
+	public int getYear() {
 		return year;
 	}
 
-
-
-	public void setYear(String year) {
+	public void setYear(int year) {
 		this.year = year;
 	}
-
-
 
 	public String getCertificate() {
 		return certificate;
 	}
 
-
-
 	public void setCertificate(String certificate) {
 		this.certificate = certificate;
 	}
 
-
-
-	public int getHallticketno() {
+	public long getHallticketno() {
 		return hallticketno;
 	}
 
-
-
-	public void setHallticketno(Integer hallticketno) {
+	public void setHallticketno(long hallticketno) {
 		this.hallticketno = hallticketno;
 	}
 
-
-
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", name=" + name + ", college=" + college + ", roll=" + roll + ", qualification="
-				+ qualification + ", course=" + course + ", year=" + year + ", certificate=" + certificate
-				+ ", hallticketno=" + hallticketno + "]";
+		return "IStudentservice [id=" + id + ", name=" + name + ", roll=" + roll + ", qualification=" + qualification
+				+ ", course=" + course + ", year=" + year + ", hallticketno=" + hallticketno + ", getId()=" + getId()
+				+ ", getName()=" + getName() + ", getRoll()=" + getRoll() + ", getQualification()=" + getQualification()
+				+ ", getCourse()=" + getCourse() + ", getYear()=" + getYear() + ", getHallticketno()="
+				+ getHallticketno() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+				+ super.toString() + "]";
 	}
-	 
-	
-
-	
 	 
 	 
 	 
